@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "your_MySQL_username";
-$password = "your_MySQL_password";
+$username = "your_mySQL_username";
+$password = "your_mySQL_password";
 $dbname = "your_db_name";
 
 $conn = new mysqli($servername,$username,$password,$dbname);
@@ -14,12 +14,15 @@ if ($conn->connect_error) {
     $age = $_GET["age"];
     $name = '"'.$n.'"'; //adding quotes to name and surname strings
     $surname = '"'.$s.'"';
-    $sql = "INSERT INTO your_table(name, surname, age) VALUES ($name, $surname,$age)";
+    $sql = "INSERT INTO your_table(field1, field2, field3) VALUES ($name, $surname,$age)";
     if($conn->query($sql) === true)
       echo "Record creation succeeded";
-    else
-    echo "Error" .$sql. "<br>" .$conn->error;
-  ?>
+    else{
+      echo  '<script>
+              window.open("error.html");
+            </script>';
+    }
+    ?>
 <html>
   <body>
    <table>
@@ -33,15 +36,15 @@ if ($conn->connect_error) {
      if ($result = $conn->query($sql)) {
       while($row = $result->fetch_assoc()) {
         echo "<tr>";
-        echo "<td> {$row['name']} </td>";
-        echo "<td> {$row['surname']} </td>";
-        echo "<td> {$row['age']} </td>";
+        echo "<td> {$row['nome']} </td>";
+        echo "<td> {$row['cognome']} </td>";
+        echo "<td> {$row['eta']} </td>";
         echo"</tr>";
       }
       echo "</table>";
     }
     $conn->close();
   ?>
-  <a style = "position: fixed; bottom: 5%" href = ".\test1.html"><-Go backo</a>
+  <a style = "position: fixed; bottom: 5%" href = ".\index(ENG).html"><-Go back</a>
   </body>
 </html>

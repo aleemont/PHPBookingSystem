@@ -14,11 +14,14 @@ if ($conn->connect_error) {
     $eta = $_GET["eta"];
     $nome = '"'.$n.'"';
     $cognome = '"'.$c.'"';
-    $sql = "INSERT INTO nome_tabella(nome, cognome, eta) VALUES ($nome, $cognome,$eta)";
+    $sql = "INSERT INTO nome_tabella(campo1, campo2, camo3) VALUES ($nome, $cognome,$eta)";
     if($conn->query($sql) === true)
       echo "Record creato correttamente";
-    else
-    echo "Errore" .$sql. "<br>" .$conn->error;
+    else{
+      echo  '<script>
+              window.open("errore.html");
+            </script>';
+    }
   ?>
 <html>
   <body>
