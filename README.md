@@ -15,7 +15,7 @@ You can also use a web-host service which provides support to PHP, MySQL and PHP
    ***NOTICE!***
     ***YOU WILL NEED TO CHANGE SOME VARIABLES NAMES OR VALUES TO MAKE "testPHPMA_PDO.php" WORK***
 
-If you need a ready-to-use version of this project contact me via email: alesandro.monticelli@live.it
+If you need a ready-to-use version of this project contact me via email: alessandro.monticelli@live.it
 
 Updates:
 
