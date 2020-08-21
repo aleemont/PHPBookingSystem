@@ -1,10 +1,10 @@
 <?php
 try{
 
-  $dbuser = "root";
-  $dbpass = "Ale-26062002";
+  $dbuser = "your_username";
+  $dbpass = "your_password";
 
-  $conn = new PDO('mysql:host=localhost;dbname=alunni', $dbuser, $dbpass);
+  $conn = new PDO('mysql:host=your_host_name;dbname=your_db_name', $dbuser, $dbpass);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 }
@@ -15,11 +15,11 @@ catch(PDOException $e){
 $n = $_GET["nome"];
 $c = $_GET["cognome"];
 $eta = $_GET["eta"];
-$nome = '"'.$n.'"';
+$nome = '"'.$n.'"';     //Adding quotes to variables strings so data can be correctly put into table
 $cognome = '"'.$c.'"';
 
 $conn->beginTransaction();
-$result = $conn->prepare("INSERT INTO studenti(nome, cognome, eta) VALUES ($nome, $cognome,$eta)");
+$result = $conn->prepare("INSERT INTO your_table(nome, cognome, eta) VALUES ($nome, $cognome,$eta)");
 $result->execute();
 $conn->commit(); 
 if($result = 1){
@@ -40,7 +40,7 @@ else{
         <td>Età</td>
       </tr>
 <?php
-  $result = $conn->prepare("SELECT * FROM studenti");
+  $result = $conn->prepare("SELECT * FROM your_table");
   if($result->execute()){
    while($row = $result->fetch(PDO::FETCH_ASSOC)){
     echo "<tr>";
