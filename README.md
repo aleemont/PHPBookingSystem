@@ -1,14 +1,13 @@
-# phpMyAdminTest
-Testing PHPMyAdmin
+# phpBookingSystem
 
-In this project I'm trying to realise an appointments booking system.
+Building an appointments booking system.
 
 Requirements:
 
 A web server. (Using Apache2.4)
 MySQL.
 PHP. (Using PHP 7.3.10)
-Nette Latte framework (v. 3.0)
+Nette Latte framework. (v. 3.0)
 PHPMyAdmin.
 
 You can also use a web-host service which provides support to PHP, MySQL and PHPMyAdmin.
