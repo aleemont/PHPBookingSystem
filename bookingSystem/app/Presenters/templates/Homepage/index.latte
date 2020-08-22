@@ -1,0 +1,20 @@
+{block content}
+<head>
+  <title>Database</title>
+</head>
+<table>
+		 <tr>
+     	  <td>Nome</td>
+        <td>Cognome</td>
+        <td>Età</td>
+      </tr>
+			{foreach $studenti as $studente}
+			<tr>
+				<td>{$studente->nome}</td>
+				<td>{$studente->cognome}</td>
+				<td>{$studente->eta}</td>
+			</tr>
+			{/foreach}
+	</table>
+  <a n:href="Homepage:default"> <-Torna indietro </a>
+  {/block}
