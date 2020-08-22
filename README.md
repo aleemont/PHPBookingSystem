@@ -37,17 +37,19 @@ New project is located in PHPBookingSystem/bookingSystem folder. Old files still
 
 ***NOTICE!!!***
     **THE CODE IS NOT READY-TO-USE, YOU WILL NEED TO CONFIG YOUR SETTINGS FOLLOWING INSTRUCTIONS ON THE OFFICIAL SITE**
-    ***THE CODE I MADE IS LOCATED AT:*** 
-    **..\app\Presenters\HomepagePresenter.php** 
-    **..\app\Presenters\templates\Homepage\default.latte**
-    **..\app\Presenters\templates\Homepage\index.latte**
+    
+    THE CODE I MADE IS LOCATED AT:
+    
+    ..\app\Presenters\HomepagePresenter.php
+    ..\app\Presenters\templates\Homepage\default.latte
+    ..\app\Presenters\templates\Homepage\index.latte
     
 to make it work on Apache2 server you will need to:
-1)download Composer from the official site: https://doc.nette.org/en/3.0/composer
-2)create a new nette web project with: ''' composer create-project Nette/web-project name_of_the_project
-3)configurate your server and db infos at ..\app\config\local.neon
-4)modify ..\app\Presenters\HomepagePresenter.php with my code
-5)modify ..\app\Presenters\templates\Homepage\default.latte with my code
-6)create ..\app\Presenters\templates\Homepage\index.latte
+1)download Composer from the official site: https://doc.nette.org/en/3.0/composer;
+2)create a new nette web project with: ''' composer create-project Nette/web-project name_of_the_project;
+3)configurate your server and db infos at ..\app\config\local.neon;
+4)modify ..\app\Presenters\HomepagePresenter.php with my code;
+5)modify ..\app\Presenters\templates\Homepage\default.latte with my code;
+6)create ..\app\Presenters\templates\Homepage\index.latte;
 
 visit official docs for further information: https://doc.nette.org/
