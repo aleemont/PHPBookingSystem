@@ -46,14 +46,20 @@ New project is located in PHPBookingSystem/bookingSystem folder. Old files still
     
 to make it work on Apache2 server you will need to:
 1)download Composer from the official site: https://doc.nette.org/en/3.0/composer;
+
 2)navigate to ../Apache24/www/ create a new nette web project with cmd command: 
 
     composer create-project Nette/web-project name_of_the_project;
 
 3)configurate your server and db infos at bookingSystem\app\config\local.neon;
+
 4)modify bookingSystem\app\Presenters\HomepagePresenter.php with my code;
+
 5)modify bookingSystem\app\Presenters\templates\Homepage\default.latte with my code;
+
 6)create bookingSystem\app\Presenters\templates\Homepage\index.latte;
+
 7)navigate to: localhost/bookingSystem/www in your browser.
+
 
 visit official docs for further information: https://doc.nette.org/
