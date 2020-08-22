@@ -1,0 +1,50 @@
+BSD 3-Clause License
+
+Copyright (c) 2020, Alessandro Monticelli
+All rights reserved.
+
+Redistribution and use in source* and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+4. Redistributions of source code must retain the name and email of the copyright holders, this
+   list of conditions and the following disclaimer in the documentation and/or other materials
+   provided with the distribution.
+  
+5. Redistributions in binary form must retain the name and email of the copyright holders, this
+   list of conditions and the following disclaimer in the documentation and/or other materials
+   provided with the distribution.
+ 
+6. Redistributions of software must retain the name and contacts of the copyright holders in front-end
+   applications (e.g. web pages or applications which use any part of source code).
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; BUSINESS INTERRUPTION; OR ILLEGAL ACTIONS) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+IF THIS SOFTWARE IS USED FOR COMMERCIAL OR PROFIT USE CONTACT THE COPYRIGHT HOLDER 
+AT: alessandro.monticelli@live.it
+IF COPYRIGHT HOLDER IS NOT CONTACTED, ANY COMMERCIAL OR PROFIT USE HAS TO BE CONSIDERED 
+NOT AUTHORIZED.
+ANY COMMERCIAL OR PROFIT USE ISN'T ALLOWED WITHOUT SPECIFIC PRIR WRITTEN PERMISSION.
+
+*:with "source code" any part of the code is intended, even partial use of source code or binary form
+is covered by this license.
+
+
