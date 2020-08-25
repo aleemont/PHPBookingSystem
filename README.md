@@ -35,6 +35,11 @@ Automatic escaping to avoid XSS and MySQL injection.
 Shorter and smarter code.
 New project is located in PHPBookingSystem/bookingSystem folder. Old files still available.
 
+Update 08/25/2020@19:55 P.M:
+Added a check on age submission. If age inserted already exists into db,
+the script will require to insert a different age and won't insert data into db.
+This feature will be useful to chek if a certain Date/Time has been already booked.
+
 ***NOTICE!!!***
     **THE CODE IS NOT READY-TO-USE, YOU WILL NEED TO CONFIG YOUR SETTINGS FOLLOWING INSTRUCTIONS ON THE OFFICIAL SITE**
     
