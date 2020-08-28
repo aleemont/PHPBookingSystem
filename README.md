@@ -4,10 +4,10 @@ Building an appointments booking system.
 
 Requirements:
 
-A web server. (Using Apache2.4)
-MySQL.
-PHP. (Using PHP 7.3.10)
-Nette Latte framework. (v. 3.0)
+A web server (Using Apache2.4);
+MySQL;
+PHP (Using PHP 7.3.10);
+Nette Latte framework (v. 3.0);
 PHPMyAdmin.
 
 You can also use a web-host service which provides support to PHP, MySQL and PHPMyAdmin.
@@ -30,15 +30,15 @@ Deleted double language files. Wrote the whole php code again using PDO for bett
 
 ***MAJOR UPDATE 08/22/2020@3:45 A.M.:***
 Wrote the whole code using Nette Latte framework (official site: https://latte.nette.org/)
-Improved security, code readability.
+Improved security and code readability.
 Automatic escaping to avoid XSS and MySQL injection.
 Shorter and smarter code.
-New project is located in PHPBookingSystem/bookingSystem folder. Old files still available.
+New project is located in PHPBookingSystem/bookingSystem folder. Old files still available but not supported anymore.
 
 Update 08/25/2020@19:55 P.M:
 Added a check on age submission. If age inserted already exists into db,
 the script will require to insert a different age and won't insert data into db.
-This feature will be useful to chek if a certain Date/Time has been already booked.
+This feature will be useful to check if a certain Date/Time has been already booked.
 
 ***NOTICE!!!***
     **THE CODE IS NOT READY-TO-USE, YOU WILL NEED TO CONFIG YOUR SETTINGS FOLLOWING INSTRUCTIONS ON THE OFFICIAL SITE**
