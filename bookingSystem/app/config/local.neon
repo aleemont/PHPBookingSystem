@@ -4,4 +4,4 @@ parameters:
 database:
 	dsn: 'mysql:host=localhost;dbname=your_db'
 	user: your_username
-	password: your_password
+	password:	your_password

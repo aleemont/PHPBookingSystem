@@ -19,15 +19,8 @@ If you need a ready-to-use version of this project contact me via email: alessan
 
 Updates:
 
-Update 08/20/2020@1:26 P.M.:
-This is just a test version for my PHPBookingSystem. It just takes data from an HTML form and puts them in a table, showing data on the screen.
-
-Update 08/20/2020@5:05 P.M.:
-Added an error page which is loaded whenever the data storing into the table goes wrong.
-
-Update 08/21/2020@12:05 P.M.:
-Deleted double language files. Wrote the whole php code again using PDO for better security and readability.
-
+***NOT SUPPORTED ANYMORE{
+ TESTING Nette Framework:
 ***MAJOR UPDATE 08/22/2020@3:45 A.M.:***
 Wrote the whole code using Nette Latte framework (official site: https://latte.nette.org/)
 Improved security and code readability.
@@ -68,3 +61,10 @@ to make it work on Apache2 server you will need to:
 
 
 visit official docs for further information: https://doc.nette.org/
+
+}***
+
+***MAJOR UPDATE COMING SOON: Migrating to Laravel***
+**The old code won't be supported anymore but it's going to be available**
+*Writing back the whole code using Laravel*
+
