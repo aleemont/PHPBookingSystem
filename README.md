@@ -88,6 +88,6 @@ Updates:
 **Migrating to Laravel**
 2020/09/15@11.00 P.M.
 
-Old code no more available. Wrote it back using Laravel (https://laravel.com/). Improved coding and security.
-Created a register, login and managing page using Laravel Jetstream.
-This is just a pre-alpha version, functional dashboard and dtabase managing coming soon.
+Old code  isn't available anymore. I wrote it back using Laravel (https://laravel.com/). Improved code syntax and overall security.
+Created a user registration, login and managing system using Laravel Jetstream.
+This is just a pre-alpha version, functional dashboard and database managing coming soon.
