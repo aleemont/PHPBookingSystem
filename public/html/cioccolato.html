@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "../css1/stileCioccolato.css" /> 
+	<link rel = "stylesheet"
+		href = "https://www.w3schools.com/w3css/4/w3.css" />
+	<meta charset = "ISO-8859-1" name = "viewport" content = "width = device-width, initial-scale = 1.0"> 
+	<meta name = "author" content = "Alessandro Monticelli"/>
+	<title>Il cioccolato</title>
+</head>
+<body>
+	<h1>Il cioccolato</h1>
+	<p>	Il cioccolato (o cioccolata, specie se fuso) è un alimento derivato dai semi dell'albero
+		del cacao, ampiamente diffuso e consumato nel mondo intero.
+	</p>
+	<p>	Nella produzione artigianale di qualità , il cioccolato è preparato utilizzando la pasta di
+		cacao come realizzata e imballata nei paesi origine, con l'aggiunta di ingredienti e 
+		aromi. Nella produzione industriale o comunque di minor pregio qualitativo, è 
+		preparato miscelando il burro di cacao (la parte grassa dei semi di cacao) con polvere 
+		di semi di cacao, zucchero e altri ingredienti facoltativi, come il latte, le mandorle, le
+		nocciole, il pistacchio o altri aromi.
+	</p>
+	<p>	Dalla miscelazione di diverse quantità  di vari ingredienti (pasta di cacao, burro di 
+		cacao, zucchero, latte in polvere, etc.) derivano poi le diverse tipologie di cioccolato:
+	</p>
+	<ul>
+		<li>cioccolato fondente</li>
+		<li>cioccolato al latte</li>
+		<li>cioccolato bianco</li>
+		<li>cioccolato gianduia</li>
+	</ul>
+	<h2>Tabella di composizione del cioccolato</h2>
+	<table>
+		<tr class = "arancione">  																
+			<th class = "doppio" rowspan="2">Composizione per 100g. di cioccolato</th>		
+			<th><img src="../immagini/cioccolato/fondente.png"></th>						
+			<th><img src="../immagini/cioccolato/latte.png"></th>
+			<th><img src="../immagini/cioccolato/bianco.png"></th>
+			<th><img src="../immagini/cioccolato/gianduia.png"></th>			
+		</tr>	
+		<tr class = "arancione">
+			<th>FONDENTE</th>
+			<th>LATTE</th>
+			<th>BIANCO</th>
+			<th>GIANDUIA</th>
+		</tr>
+		<tr>
+			<td>Energia(Kcal)</td>
+			<td>515</td>
+			<td>545</td>
+			<td>529</td>
+			<td>543</td>
+		</tr>
+		<tr>
+			<td>Lipidi (g)</td>
+			<td>33.6</td>
+			<td>36.3</td>
+			<td>30.9</td>
+			<td>36.9</td>
+		</tr>
+		<tr>
+			<td>Proteine (g)</td>
+			<td>6.6</td>
+			<td>7.3</td>
+			<td>8.0</td>
+			<td>7.2 </td>
+		</tr>
+		<tr>
+			<td>Zuccheri (g)</td>
+			<td>49.7</td>
+			<td>50.5</td>
+			<td>58.3</td>
+			<td>48.6</td>
+		</tr>
+	</table>
+	<button onclick="bottone()" class="w3-btn w3-right-align w3-small w3-orange" style = "position:absolute; right:1%; bottom:4%">Firma</button>
+		<div id = "firma" class = "w3-bottom w3-hide"><footer  class = "w3-transparent w3-right-align">Alessandro Monticelli</footer></div>
+	<script>
+	var visibile = true;
+		function bottone(){
+		visibile = !visibile;
+		if (visibile == true){
+			document.getElementById('firma').classList.add("w3-hide");
+			}
+		else{
+			document.getElementById('firma').classList.remove("w3-hide");
+			}
+		}
+	</script>
+</body>
+</html>

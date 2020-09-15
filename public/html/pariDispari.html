@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name = "viewport" content = "width = device-width initial-scale = 1" />
+		<meta charset = "ANSI"/>
+		<meta name = "author" content = "Alessandro Monticelli"/>
+		<script>
+			
+			function pariDispari(){
+				var num = document.getElementById("numero").value;
+				var r = num%2;
+				var msg = "";
+				if(num == "")
+					msg = "Inserire un numero";
+				else if(r == 0)
+					msg = "Numero Pari";
+				else
+					msg = "Numero Dispari";
+				document.getElementById("res").innerHTML = msg;
+			}
+		</script>
+	</head>
+	<body>
+		<div>Inserire un numero intero: <input type = "text" id = "numero"/><br></div>
+		<button onclick = "pariDispari()">Controlla</button>
+		<p id = "res"></p>
+	</body>
+</html>

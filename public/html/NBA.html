@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel = "stylesheet" type = "text/css" href = "../css/stileNBA.css1" />
+		<link rel = "stylesheet"
+		href = "https://www.w3schools.com/w3css/4/w3.css" />
+		<meta charset = "ISO-8859-1" name = "viewport" content = "width = device-width, initial-scale = 1.0"> 
+		<title>NBA</title>
+	</head>
+	<body>
+		<h1>NBA</h1>
+		<p>La National Basketball Association, comunemente nota come NBA, è la principale lega 
+		professionistica di pallacanestro degli Stati Uniti d'America. Molti dei migliori cestisti 
+		del mondo giocano nella NBA e il livello complessivo della competizione è considerato 
+		il più alto al mondo. 
+		</p>
+		<p>La lega fu fondata a New York, il 6 giugno 1946 come Basketball Association of 
+		America (BAA). La lega adottò il nome di National Basketball Association nell'autunno 
+		del 1949 dopo una fusione con la lega rivale National Basketball League. Il quartier
+		generale della NBA si trova nella Olympic Tower al 645 della Fifth Avenue a New York. 
+		La NBA Entertainment e gli studi della NBA TV sono ubicati invece a Secaucus, New Jersey.
+		</p>
+		<h2>Record di punti realizzati in carriera</h2>
+		<ol>
+			<li> Kareem Abdul-Jabbar 38.387 </li>
+			<li> Karl Malone         36.928 </li>
+			<li> Kobe Bryant         32.310 </li>
+			<li> Michael Jordan      32.292 </li>
+			<li> Wilt Chamberlain    31.419 </li>
+		</ol>
+		<h3>Classifica 2015</h3>
+		<table>
+			<tr class = "prima">
+				<th colspan = "4">EASTERN CONFERENCE</th>
+			</tr>
+			<tr class = "seconda">
+				<th colspan = "2">Eastern Division</th>
+				<th>V</th>
+				<th>P</th>
+			</tr>
+			<tr>
+				<td><img src = "../immagini/NBA/raptors.gif"></td>
+				<td>Toronto</td>
+				<td>50</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td><img src = "../immagini/NBA/bos.gif"></td>
+				<td>Boston</td>
+				<td>43</td>
+				<td>31</td>
+			</tr>
+			<tr>
+				<td><img src = "../immagini/NBA/nets.gif"></td>
+				<td>Brooklin</td>
+				<td>30</td>
+				<td>46</td>
+			</tr>
+			<tr>
+				<td><img src = "../immagini/NBA/nyk.gif"></td>
+				<td>New York</td>
+				<td>21</td>
+				<td>53</td>
+			</tr>
+			<tr>
+				<td><img src = "../immagini/NBA/phi.gif"></td>
+				<td>Philadelphia</td>
+				<td>9</td>
+				<td>66</td>
+			</tr>
+		</table>
+		<button onclick="bottone()" class="w3-btn w3-right-align w3-grey w3-small" style = "position:fixed; right:1%; bottom:4%">Firma</button>
+		<div id = "firma" class = "w3-bottom w3-hide"><footer  class = "w3-transparent w3-right-align">Alessandro Monticelli</footer></div>
+		<script>
+		var visibile = true;
+			function bottone(){
+			visibile = !visibile;
+			if (visibile == true){
+				document.getElementById('firma').classList.add("w3-hide");
+				}
+			else{
+				document.getElementById('firma').classList.remove("w3-hide");
+				}
+			}
+		</script>
+	</body>
+</html>

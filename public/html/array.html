@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1"/>
+		<meta name = "author" content = "Alessandro Monticelli"/>
+		<meta name = "description" content = "Gestione di un array: creazione, caricamento casuale, ordinamento"/>
+		<link rel = "stylesheet" href = "https://www.w3schools.com/w3css/4/w3.css" />
+	</head>
+	<body class = "w3-teal">
+	<div id = "main">
+		<div class = "w3-blue-grey w3-block">
+			<h1>Gestione di un array</h1>
+		</div>
+		<form class = "w3-container">
+			<label for = "dim">Inserisci dimensione: </label>
+			<div id = "in" style = "width:25%"><input class = "w3-input" type = "text" id = "dimensione" name = "dim"></div>
+			<div id = "pulsanti" class = "w3-bar" style = "width:25%">
+				<button id = "carica" class = "w3-button w3-bar-item w3-hover-pale-green w3-small" type = "button">Carica</button>
+				<button id = "stampa" class = "w3-button w3-bar-item w3-hover-pale-green w3-small" type = "button">Stampa</button>
+				<button id = "ordina" class = "w3-button w3-bar-item w3-hover-pale-green w3-small" type = "button">Ordina e stampa</button>
+			</div>
+		</form>
+		<div class = "w3-container ">
+			<p id = "vettore" class = "w3-border" style = "width: 25%;">&nbsp;</p>
+		</div>
+	</div>
+	<script>
+		var v = [];
+		function carica(){
+			v = [];
+			var d = parseInt(document.getElementById('dimensione').value);
+			var i = 0;			
+			for(i = 0; i < d; i++)
+				v[i]=Math.floor(Math.random()*50)+1;
+		}
+		document.getElementById("carica").addEventListener("click",carica);
+		
+		function stampa(){
+			var d = parseInt(document.getElementById('dimensione').value);
+			var par = window.innerWidth * 0.01;
+			document.getElementById("vettore").innerHTML = "";
+			document.getElementById("vettore").innerHTML = v;
+			if(d > par)
+				document.getElementById("vettore").style.overflowX= "scroll";
+			}
+		document.getElementById("stampa").addEventListener("click",stampa);
+		
+		function ordina(){
+			v.sort();
+			v.sort(function(a, b){return a - b});
+			var d = parseInt(document.getElementById('dimensione').value);
+			var i = 0;
+			document.getElementById("vettore").innerHTML = v;
+		}
+		document.getElementById("ordina").addEventListener("click",ordina);
+		
+		function resize(){
+			var w = window.innerWidth;
+			if(w < 600){
+				document.getElementById("vettore").style.width = "50%";
+				document.getElementById("in").style.width = "50%";
+				document.getElementById("pulsanti").style.width = "50%";
+			}
+		}
+		document.addEventListener("DOMContentLoaded", resize);
+	</script>		
+	</body>
+</html>

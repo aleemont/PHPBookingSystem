@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset = "ISO-8859-1" name = "viewport" content = "width = device-width, initial-scale = 1">
+	<meta name = "author" content = "Alessandro Monticelli">
+	<meta name = "description" content = "Orario scolastico 4°CI A.S. 2019/2020"/>
+	<link rel = "stylesheet" type = "text/css" href = "../css1/stileOrario.css"/>
+	<link rel = "stylesheet" href = "https://www.w3schools.com/w3css/4/w3.css" />
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-ios.css">
+	<title>Orario</title>
+	</head>
+	<body class = "w3-white">
+		<div class="w3-sidebar w3-bar-block w3-card w3-ios-blue w3-animate-left" style="display:none" id="mySidebar">
+			<button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Chiudi &times;</button>
+			<p class = "w3-bar-item w3-opacity">Seleziona orario</p>
+			<button	onclick="tendina('orarioBar')" class="w3-bar-item w3-button w3-block w3-left-align">Orario Scolastico</button>
+			<div id = "orarioBar" class = "w3-container w3-hide">
+				<p class="w3-bar-item w3-opacity">Seleziona materia<br></p>
+				<button	onclick="tendina('edFis')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Ed. Fisica</button>
+					<div id="edFis" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Martedì</div>
+						<div class = "w3-animate-zoom ora">Giovedì</div>
+					</div>
+				<button	onclick="tendina('inf')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Informatica</button>
+					<div id="inf" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Lunedì (2 ore)</div>
+						<div class = "w3-animate-zoom ora">Giovedì</div>
+						<div class = "w3-animate-zoom ora">Venerdì (2 ore)</div>
+						<div class = "w3-animate-zoom ora">Sabato</div>
+					</div>
+				<button	onclick="tendina('ing')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Inglese</button>
+					<div id="ing" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Lunedì</div>
+						<div class = "w3-animate-zoom ora">Mercoledì</div>
+					</div>
+				<button	onclick="tendina('ita')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Italiano</button>
+					<div id="ita" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Martedì</div>
+						<div class = "w3-animate-zoom ora">Mercoledì (2 ore)</div>
+						<div class = "w3-animate-zoom ora">Venerdì</div>
+					</div>
+				<button	onclick="tendina('mate')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Matematica</button>
+					<div id="mate" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Lunedì</div>
+						<div class = "w3-animate-zoom ora">Martedì</div>
+						<div class = "w3-animate-zoom ora">Mercoledì</div>
+						<div class = "w3-animate-zoom ora">Venerdì</div>
+						<div class = "w3-animate-zoom ora">Sabato</div>
+					</div>
+				<button	onclick="tendina('irc')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Religione</button>
+					<div id="irc" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Martedì</div>
+					</div>
+				<button	onclick="tendina('sis')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Sistemi e Reti</button>
+					<div id="sis" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Martedì (2 ore)</div>
+						<div class = "w3-animate-zoom ora">Giovedì</div>
+						<div class = "w3-animate-zoom ora">Venerdì</div>
+					</div>
+				<button	onclick="tendina('sto')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Storia</button>
+					<div id="sto" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Giovedì</div>
+						<div class = "w3-animate-zoom ora">Sabato</div>
+					</div>
+				<button	onclick="tendina('tpsit')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">T.P.S.I.T.</button>
+					<div id="tpsit" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Giovedì</div>
+						<div class = "w3-animate-zoom ora">Sabato</div>
+					</div>
+				<button	onclick="tendina('tele')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Telecomunicazioni</button>
+					<div id="tele" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Lunedì (2 ore)</div>
+						<div class = "w3-animate-zoom ora">Mercoledì</div>
+					</div>
+			</div>
+			<button	onclick="tendina('orarioDad')" class="w3-bar-item w3-button w3-block w3-left-align">Orario
+					<span class = "tooltip">DaD<span class = "tooltiptext">Didattica a Distanza</span></span></button>
+			<div id = "orarioDad" class = "w3-container w3-hide">
+				<p class="w3-bar-item w3-opacity">Seleziona materia<br></p>
+				<button	onclick="tendina('edFisDad')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Ed. Fisica</button>
+					<div id="edFisDad" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Martedì</div>
+					</div>
+				<button	onclick="tendina('infDad')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Informatica</button>
+					<div id="infDad" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Lunedì</div>
+						<div class = "w3-animate-zoom ora">Venerdì</div>
+						<div class = "w3-animate-zoom ora">Sabato</div>
+					</div>
+				<button	onclick="tendina('ingDad')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Inglese</button>
+					<div id="ingDad" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Lunedì</div>
+						<div class = "w3-animate-zoom ora">Mercoledì</div>
+					</div>
+				<button	onclick="tendina('itaDad')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Italiano</button>
+					<div id="itaDad" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Lunedì</div>
+						<div class = "w3-animate-zoom ora">Venerdì</div>
+					</div>
+				<button	onclick="tendina('mateDad')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Matematica</button>
+					<div id="mateDad" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Martedì</div>
+						<div class = "w3-animate-zoom ora">Venerdì</div>
+					</div>
+				<button	onclick="tendina('sisDad')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Sistemi e Reti</button>
+					<div id="sisDad" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Mercoledì</div>
+						<div class = "w3-animate-zoom ora">Giovedì</div>
+					</div>
+				<button	onclick="tendina('stoDad')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Storia</button>
+					<div id="stoDad" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Giovedì</div>
+					</div>
+				<button	onclick="tendina('tpsitDad')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">T.P.S.I.T.</button>
+					<div id="tpsitDad" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Sabato</div>
+					</div>
+				<button	onclick="tendina('teleDad')" class="w3-bar-item w3-button w3-block w3-left-align w3-animate-left">Telecomunicazioni</button>
+					<div id="teleDad" class="w3-container w3-hide">
+						<div class = "w3-animate-zoom ora">Mercoledì</div>
+					</div>
+				</div>
+				<a id = "hp" href = "../index.html" class="w3-bar-item w3-opacity w3-button w3-left-align w3-bottom" style = "width:25%">Torna alla Home Page</a>
+			</div>
+		<div id="main">
+			<div class="w3-ios-blue">
+				<button id="openNav" class="w3-button w3-ios-blue w3-xlarge w3-opacity" onclick="w3_open()">&#9776; Filtra per materia</button>
+				<div class="w3-container w3-ios-blue">				
+					<h1 id = "intestazione">Orario Scolastico
+					<small style = "font-size:50%">&nbsp;A.S. 2019/2020</small>
+					</h1>
+				</div>
+				<div  id = "orario" class = "w3-card-2 w3-margin w3-display-middle">
+				<script>
+				function resize(){
+						var w = window.innerWidth;
+							if(w < 600){
+								document.getElementById("hp").style.width = "50%";
+								document.getElementById("hp").style.position = "fixed";
+								document.getElementById("hp").style.bottom = "5%";
+								document.getElementById("tab").style.width = "25%";
+								document.getElementById("tab").style.height = "25%";
+								document.getElementById("tab").style.fontSize = "40%";
+								document.getElementById("tab").style.fontWeight = "bold";
+								document.getElementById("tab1").style.width = "25%";
+								document.getElementById("tab1").style.height = "25%";
+								document.getElementById("tab1").style.fontSize = "40%";
+								document.getElementById("tab1").style.fontWeight = "bold";
+								document.getElementById("intestazione").style.fontSize = "110%";
+								document.getElementById("openNav").innerHTML = "&#9776;";						
+							}
+						}
+				document.addEventListener("DOMContentLoaded", resize);
+				</script>	
+				</div>
+				<button class="w3-button w3-left-align w3-block w3-ios-light-blue" onclick="tendina('orario1')">Orario Scolastico</button>
+				<div id = "orario1" class = "w3-hide w3-animate-left w3-container w3-ios-light-blue">
+					<table id = "tab" class = "w3-show w3-table">
+
+							<tr>
+								<th>Ora</th>
+								<th>Lunedì</th>
+								<th>Martedì</th>
+								<th>Mercoledì</th>
+								<th>Giovedì</th>
+								<th>Venerdì</th>
+								<th>Sabato</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<td>Inglese</td>
+								<td>Sistemi</td>
+								<td>Italiano</td>
+								<td>Storia</td>
+								<td>Informatica</td>
+								<td>Informatica</td>
+							</tr>
+							<tr>
+								<th>2</th>
+								<td>Matematica</td>
+								<td>Sistemi</td>
+								<td>Italiano</td>
+								<td>Ed. Fisica</td>
+								<td>Informatica</td>
+								<td>Matematica</td>
+							</tr>
+							<tr>
+								<th>3</th>
+								<td><div class = "tooltip">Telec.<span class = "tooltiptext">Telecomunicazioni</span></div></td>
+								<td>Italiano</td>
+								<td>Inglese</td>
+								<td>Informatica</td>
+								<td>Matematica</td>
+								<td>Storia</td>
+							</tr>
+							<tr>
+								<th>4</th>
+								<td><div class = "tooltip">Telec.<span class = "tooltiptext">Telecomunicazioni</span></div></td>
+								<td>Matematica</td>
+								<td><div class = "tooltip">Telec.<span class = "tooltiptext">Telecomunicazioni</span></div></td>
+								<td><div class = "tooltip">T.P.S.I.T.<span class = "tooltiptext">Tecniche di Prog. Sistemi Informatici</span></div></td>
+								<td>Sistemi</td>
+								<td><div class = "tooltip">T.P.S.I.T..<span class = "tooltiptext">Tecniche di Prog. Sistemi Informatici</span></div></td>
+							</tr>
+							<tr>
+								<th>5</th>
+								<td>Informatica</td>
+								<td>Religione</td>
+								<td>Matematica</td>
+								<td>Sistemi</td>
+								<td>Italiano</td>
+								<td><div class = "tooltip">T.P.S.I.T.<span class = "tooltiptext">Tecniche di Prog. Sistemi Informatici</span></div></td>
+							</tr>
+							<tr class = "sesta">
+								<th>6</th>
+								<td class = "ultima">Informatica</td>
+								<td class = "ultima">Ed. Fisica</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+					<button class="w3-button w3-left-align w3-block w3-ios-light-blue" onclick="tendina('orario2')">Orario 
+					<span class = "tooltip">DaD<span class = "tooltiptext">Didattica a Distanza</button>
+					<div id = "orario2" class = "w3-hide w3-animate-left w3-container w3-ios-light-blue">
+						<table id = "tab1" class = "w3-show w3-table">
+							<tr>
+								<th>Ora</th>
+								<th>Lunedì</th>
+								<th>Martedì</th>
+								<th>Mercoledì&nbsp;</th>
+								<th>Giovedì&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+								<th>Venerdì</th>
+								<th>Sabato</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<td>Informatica</td>
+								<td>Matematica</td>
+								<td>Inglese</td>
+								<td>Sistemi</td>
+								<td>Matematica</td>
+								<td>Informatica</td>
+							</tr>
+							<tr>
+								<th>2</th>
+								<td>Italiano</td>
+								<td>Ed. Fisica</td>
+								<td><div class = "tooltip">Telec.<span class = "tooltiptext">Telecomunicazioni</span></div></td>
+								<td>Storia</td>
+								<td>Informatica</td>
+								<td><div class = "tooltip">T.P.S.I.T..<span class = "tooltiptext">Tecniche di Prog. Sistemi Informatici</span></div></td>
+							</tr>
+							<tr>
+								<th>3</th>
+								<td>Inglese</td>
+								<td></td>
+								<td>Sistemi</td>
+								<td></td>
+								<td>Italiano</td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		<div class="w3-dropdown-hover w3 w3-right-align w3-bottom ">
+			<button id="info" class="w3-button w3-block w3-right-align w3-tiny w3-opacity">info sito</button>
+			<div id =  "foot" class = "w3-dropdown-content w3-bottom"><footer class = "w3-opacity">&#x64;&#x65;&#x76;&#x65;&#x6c;&#x6f;&#x70;&#x65;&#x64;&nbsp;&#x62;&#x79;:&nbsp;
+				&#x41;&#x6c;&#x65;&#x73;&#x73;&#x61;&#x6e;&#x64;&#x72;&#x6f;&nbsp;&#77;&#111;&#x6e;&#116;&#x69;&#99;&#x65;&#108;&#x6c;&#x69;&nbsp;&#67;&#83;&#x53&nbsp;&#98;&#121;:
+				<a href = "https://www.w3schools.com/w3css/">&#x57;&#51;.&#67;&#83;&#x53;&nbsp;</a></footer>
+			</div>
+		</div>
+	</body>
+	<script>		
+		function w3_open() {
+				var w = window.innerWidth;
+				if(w > 550){
+					document.getElementById("info").style.marginLeft = "25%";
+					document.getElementById("foot").style.marginLeft = "25%";
+					document.getElementById("foot").classList.remove("w3-right-align");
+					document.getElementById("foot").classList.add("w3-left-align");
+					document.getElementById("main").style.marginLeft = "25%";
+					document.getElementById("mySidebar").style.width = "25%";
+					document.getElementById("mySidebar").style.width = "25%";
+					document.getElementById("mySidebar").style.display = "block";
+					document.getElementById("openNav").style.display = 'none';
+				}
+				else{
+					document.getElementById("info").style.marginLeft = "50%";
+					document.getElementById("foot").style.marginLeft = "50%";
+					document.getElementById("foot").classList.remove("w3-right-align");
+					document.getElementById("foot").classList.add("w3-left-align");
+					document.getElementById("main").style.marginLeft = "50%";
+					document.getElementById("mySidebar").style.width = "50%";
+					document.getElementById("mySidebar").style.width = "50%";
+					document.getElementById("mySidebar").style.display = "block";
+					document.getElementById("openNav").style.display = 'none';
+					}
+			}
+		function w3_close() {
+				document.getElementById("main").style.marginLeft = "0%";
+				document.getElementById("mySidebar").style.display = "none";
+				document.getElementById("openNav").style.display = "inline-block";
+				document.getElementById("foot").style.marginLeft = "0%";
+				document.getElementById("foot").classList.remove("w3-left-align");
+				document.getElementById("foot").classList.add("w3-right-align");
+				document.getElementById("info").style.marginLeft = "0%";
+				}
+		function tendina(id) {
+				var x = document.getElementById(id);
+				if(x.className.indexOf("w3-show") == -1)
+					x.className += " w3-show";
+				else
+					x.className = x.className.replace(" w3-show", "");
+				}
+	</script>
+</html>

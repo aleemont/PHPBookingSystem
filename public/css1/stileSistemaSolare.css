@@ -1,0 +1,41 @@
+html{
+	font-family:Arial;
+	background-color:#0080FF;
+	color:white;
+}
+
+h1{
+	background-color:#9900CC;
+	color:yellow;
+	font-size:120%;
+}
+
+h2{
+	background-color:#6600CC;
+	color:white;
+}
+
+li.pianeti{
+	font-size:140%;
+}
+
+table{
+	width:25%;
+	font-family:Verdana;
+	background-color:yellow;
+	text-align:center;
+}
+
+tr{
+	background-color:#6600CC;
+	color:white;
+}
+
+.prime{
+	background-color:#9900CC;
+	color:yellow;
+}
+
+th.primoEl{
+	font-size:120%;
+}

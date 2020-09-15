@@ -1,0 +1,22 @@
+h1{
+	background-color:orange;
+}
+
+table{
+	width:50%;
+	font-family:Verdana;
+	text-align:center;
+	background-color:#FFFF80;
+}
+
+.arancione{
+	background-color:orange;
+}
+
+.doppio{												
+	font-size:120%;
+}
+
+td{
+	background-color:#FFC000;
+}

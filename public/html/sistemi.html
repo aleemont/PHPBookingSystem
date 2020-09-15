@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <meta name = "author" content="Alessandro Monticelli">
+        <meta name = "description" content = "Progetto finale Sistemi e Reti">
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" >
+        <link rel = "stylesheet" type = "text/css" href = "../css1/w3-css.css">
+    </head>
+    <body>
+        <div id = "main" class = "w3-row">
+            <div class = "w3-blue-grey w3-container">
+                    <h1 id = "titolo">Progetto finale<small style = "font-size:50%">&nbsp;Sistemi e Reti 4°CI</small></h1>
+                    <button id="openNav" class="w3-btn w3-blue-gray w3-large w3-right dow">
+                        <a class = "link" href = "../downloads/sistemi/VerificaFinale.pkt" download>Download</a>
+                        </button>
+            </div>
+            <div class = "w3-container w3-padding-24"  >
+                <div class = "w3-card w3-padding" style = "height:500px; overflow-y: scroll;">
+                    Per la realizzazione del progetto, è stato deciso di utilizzare:
+                    <ul>
+                        <li>2 router: il primo utilizzato come router NAT ed il secondo utilizzato con lo scopo di simulare 
+                        l’accesso alla rete fornita dall’ISP; </li>
+                        <li>2 server (di cui uno DHCP e l’altro http): un server è stato utilizzato per l’attribuzione degli 
+                        indirizzi dinamici ai client (DHCP). L’altro server è stato usato per fornire l’accesso ad Internet, 
+                        con un esempio di pagina web caricata al suo interno.</li>
+                        <li>1 switch multilayer: utilizzato per smistare la connessione dal router NAT agli switch dei singoli 
+                        uffici e dividere la rete in due VLAN.</li>
+                        <li>7 switch: uno per ogni ufficio (a parte per la Sala Riunioni che è fornita di dispositivi wireless)
+                        e uno per unire il server DHCP e router NAT.</li>
+                        <li>2 access point: utilizzati per fornire la rete ai dispositivi wireless.</li>
+                        <li>10 PC client;</li>
+                        <li>3 laptop (tutti wireless);</li>
+                        <li>5 stampanti (di cui 1 wireless);</li>
+                        <li>2 telefoni cellulari (entrambi wireless).</li>
+                    </ul>
+                    <br>
+                    <img class = "topologia" src = "../immagini/sistemi/topologia.png" alt = "topologia rete">
+                    <br><br>
+                    Per la rete è stato scelto l’indirizzo ip privato 192.168.1.0 con maschera 255.255.255.0. 
+                    Come gateway è stato scelto l’indirizzo 192.168.1.1. La rete è stata divisa in due VLAN (Virtual Local Area Network)
+                    con indirizzi 192.168.1.0 (maschera 255.255.255.128, 25 bit) e 192.168.1.128 (maschera 255.255.255.128, 25 bit).
+                    Inizialmente si è pensato di impostare le interfacce interne 192.168.1.0/24 (dividendo la rete in tre sottoreti), però,
+                     per evitare di avere indirizzi in eccesso, alla fine di è deciso di lasciare due indirizzi di classe A (10.0.0.0/8).
+                    Dopo aver collegato i dispositivi terminali ai relativi switch e router, tramite lo switch multilayer, è stata divisa 
+                    la rete in due VLAN (con indirizzi precedentemente riportati) tramite i seguenti 
+                    <a href = #comandiVLAN class = "w3-codespan w3-hover-blue-grey" style = "text-decoration: none;">comandi</a><br>
+                    Gli indirizzi sono statici sono stati assegnati tramite GUI<br>
+                    Sono stati assegnati indirizzi statici ad alcuni dispositivi perché ritenuti di importanza maggiore, in quanto
+                    hanno bisogno di avere tali indirizzi per essere facilmente riconosciuti dall’intera rete; essi sono:
+                    <ul>
+                        <li>VLAN1<br> 
+                        	PC0 (Ufficio direttore): 192.168.1.2;<br>
+                        	PC1 (Ufficio segreteria): 192.168.1.3;<br>
+                        	PC2 (Ufficio amministrativo): 192.168.1.4;<br>
+                        </li>
+                        <li>VLAN2<br>
+                        	Printer3 (Sala riunioni): 192.168.1.130;<br>
+                            PC8 (Ufficio redattori): 192.168.131.<br>
+                        </li>
+                    </ul>
+                        Gli altri dispositivi hanno indirizzamento dinamico, la cui configurazione è spiegata in seguito.
+                        È stato successivamente impostato il routing statico del router NAT e del multilayer con i seguenti
+                    <a href = #comandiROUTE class = "w3-codespan w3-hover-blue-grey" style = "text-decoration: none;">comandi</a><br>
+                    Dopodiché è stato configurato il server DHCP e gli è stato assegnato l’indirizzo 192.168.2.2 (con gateway 192.168.2.1).
+                    Si è preferito scegliere un indirizzamento dinamico con l’aiuto del server per avere una maggiore separazione dei compiti
+                    rispetto ad una configurazione DHCP sul router (in questo caso eseguibile anche sullo switch multilayer). Inoltre è stato
+                    impostato l’helper address sul multilayer, il tutto tramite i seguenti 
+                    <a href = #comandiDHCP class = "w3-codespan w3-hover-blue-grey" style = "text-decoration: none;">comandi</a><br>
+                    È stato successivamente impostato il NAT dinamico, ponendo come NAT inside 192.168.1.0/24, da tradurre in 50.40.30.0/24, 
+                    e come NAT outside l’interfaccia che va verso il router ISP. Il tutto è stato configurato attraverso i seguenti 
+                    <a href = #comandiNAT class = "w3-codespan w3-hover-blue-grey" style = "text-decoration: none;">comandi</a><br>
+                    <br>
+                    È stato caricato il presente sito sul server (con servizio http-https) nella rete 20.0.0.0/8 del router www, in modo da
+                    fornire l’accesso allo stesso da parte dei nodi della rete configurata.
+                </div>
+                <div class ="w3-container w3-padding-24" style = "height:350px">
+                        <iframe id = "video" class = "w3-half" style = "height:340px;position:absolute;right:25%" src="https://www.youtube.com/embed/BvH39tmheNI"></iframe>
+                </div>
+                <div id = "comandiVLAN" class = "w3-container w3-padding-24">
+                    Comandi configurazione VLAN:
+                    <div id = "comandi1" class = "w3-code w3-light-gray notranslate" style = "height:290px; width:50%;overflow-y: auto;">
+                        Switch>en<br>
+                        Switch#vlan database<br>
+                        Switch(vlan)#vlan 10 name amministrazione<br>
+                        Switch(vlan)#vlan 20 name ufficiostampa<br>
+                        Switch(vlan)#exit<br>
+                        Switch#conf t<br>
+                        Switch(config)#int vlan 10<br>
+                        Switch(config-if)#ip address 192.168.1.0 255.255.255.0<br>
+                        Switch(config-if)#exit<br>
+                        Switch(config)#int vlan 20<br>
+                        Switch(config-if)#ip address 192.168.1.128 255.255.255.0<br>
+                        
+                    </div>
+                </div>
+                <div id = "comandiROUTE" class = "w3-container w3-padding-24">
+                    Comandi configurazione routing statico:
+                    <div id = "comandi2" class = "w3-code w3-light-gray notranslate" style = "height:310px; width:50%;overflow-y: auto;">
+                        Switch>en<br>
+                        Switch#conf t<br>
+                        Switch(config)#int fa0/1<br>
+                        Switch(config-if)#no switchport<br>
+                        Switch(config-if)#ip address 10.0.0.2 255.0.0.0<br>
+                        <br>
+                        Router>en<br>
+                        Router#conf t<br>
+                        Router(config)#int fa0/0<br>
+                        Router(config-if)#ip address 10.0.0.1 255.0.0.0<br>
+
+                    </div>
+                </div>
+                <div id = "comandiDHCP" class = "w3-container w3-padding-24">
+                    Comandi configurazione server DHCP e Helper Address:
+                    <div id = "comandi3" class = "w3-code w3-light-gray notranslate" style = "height:256px; width:50%;overflow-y: auto;">
+                        Switch>en<br>
+                        Switch#conf t<br>
+                        Switch(config)#int vlan 10<br>
+                        Switch(config-if)#ip helper-address 192.168.2.2<br>
+                        Switch(config-if)#exit<br>
+                        Switch(config)#int vlan 20<br>
+                        Switch(config-if)#ip helper-address 192.168.2.2<br>
+                        Switch(config-if)#exit<br>
+                        Switch(config)#int fa0/1<br>
+                        Switch(config-if)#ip helper-address 192.168.2.2<br>
+
+                         
+                    </div>
+                </div>
+                <div id = "comandiNAT" class = "w3-container w3-padding-24">
+                    Comandi configurazione NAT dinamico:
+                    <div id = "comandi4" class = "w3-code w3-light-gray notranslate" style = "height:400px; width:50%;overflow-y: auto;">
+                        Router>en<br>
+                        Router#conf t<br>
+                        Router(config)#ip nat pool rete 50.40.30.2 50.40.30.25 netmask 255.255.255.0<br>
+                        Router(config)#access-list 1 permit 192.168.1.0 0.0.0.255<br>
+                        Router(config)#int fa0/0<br>
+                        Router(config-if)#ip nat inside<br>
+                        Router(config-if)#exit<br>
+                        Router(config)#int se2/0<br>
+                        Router(config-if)#ip nat outside<br>
+                        Router(config-if)#exit<br>
+                        Router(config)#ip nat inside source list 1 pool rete<br>
+                        Router(config)# <br>
+                        Router(config)#ip nat inside source static 192.168.2.2 50.40.30.1<br>
+                        Router(config)#int fa1/0<br>
+                        Router(config-if)#ip nat inside<br>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover w3-block w3-right-align w3-bottom">
+			<button class="w3-button w3-block w3-right-align w3-tiny">info sito</button>
+			<div class = "w3-dropdown-content w3-bottom"><footer class = "w3-blue-grey">
+                Gruppo: Flores M. Monticelli A. Noce G. Ostuni F. - <small style = "font-size:75%">Developed by: Monticelli A.</small>
+				CSS by:<a target  = "_blank" href = "https://www.w3schools.com/w3css/">w3-CSS</a>&nbsp;</footer>
+			</div>
+		</div>
+    </body>
+    <script>
+        function resize(){
+            var w = window.innerWidth;
+            if(w < 700){
+                document.getElementById("comandi1").style.width = "100%";
+                document.getElementById("comandi2").style.width = "100%";
+                document.getElementById("comandi3").style.width = "100%";
+                document.getElementById("comandi4").style.width = "100%";
+                document.getElementById("video").style.position = "absolute";
+                document.getElementById("video").style.left = "5%";
+                document.getElementById("video").style.width = "90%";
+                document.getElementById("video").style.height = "320px";
+                document.getElementById("titolo").innerHTML = "<h1 id = 'titolo'>Progetto finale<br><small style = 'font-size:50%'>&nbsp;Sistemi e Reti 4°CI</small></h1>";
+            }
+        }
+        document.addEventListener("DOMContentLoaded", resize);
+    </script>
+</html>

@@ -1,0 +1,29 @@
+h1{
+	background-color:#0066CC;
+	color:white;
+	font-size:120%;
+}
+
+h2{
+	background-color:#0099CC;
+}
+
+table{
+	width:25%;
+	font-family:Verdana;
+	background-color:#F0F0F0;
+}
+
+tr{
+	background-color:light gray;
+}
+
+.prima{
+	background-color:#0066CC;
+	color:white;
+	font-size:120;
+}
+
+.seconda{
+	background-color:#0099CC;
+}

@@ -1,0 +1,25 @@
+tr, th, td{
+	color:black;
+    border:1px solid grey;
+	background-color:#efeff4;
+    }
+ 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 3px;  
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.ora{
+	text-indent:1em;
+}
