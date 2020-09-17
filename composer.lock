@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "05fd889a40e9ba79d25cdab774009d84",
+    "content-hash": "ee861ac76af78fe31d32480c1f3881a1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1680,16 +1680,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v2.2.1",
+            "version": "v2.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "35b8cec0c23fbb279430368fccc4b7b460513f28"
+                "reference": "0480aa04aa08314dd2ed1b62615d8184e7d3071a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/35b8cec0c23fbb279430368fccc4b7b460513f28",
-                "reference": "35b8cec0c23fbb279430368fccc4b7b460513f28",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/0480aa04aa08314dd2ed1b62615d8184e7d3071a",
+                "reference": "0480aa04aa08314dd2ed1b62615d8184e7d3071a",
                 "shasum": ""
             },
             "require": {
@@ -1703,8 +1703,8 @@
                 "calebporzio/sushi": "^2.1",
                 "laravel/framework": "^7.0|^8.0",
                 "mockery/mockery": "^1.3.1",
-                "orchestra/testbench": "^5.0",
-                "orchestra/testbench-dusk": "^5.2",
+                "orchestra/testbench": "^5.0|^6.0",
+                "orchestra/testbench-dusk": "^5.2|^6.0",
                 "phpunit/phpunit": "^8.4|^9.0",
                 "psy/psysh": "@stable"
             },
@@ -1741,7 +1741,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-09-12T00:08:16+00:00"
+            "time": "2020-09-15T02:25:20+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
